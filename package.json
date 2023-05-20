@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tw-classed/react": "^1.4.4",
     "autoprefixer": "10.4.14",
+    "clsx": "^1.2.1",
     "next": "13.4.3",
     "postcss": "8.4.23",
     "react": "18.2.0",
@@ -17,15 +19,17 @@
     "tailwindcss": "3.3.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "20.2.1",
+    "@types/prettier": "^2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "18.2.4",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.3",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "typescript": "5.0.4"
   }
 }
