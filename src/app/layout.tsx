@@ -5,8 +5,8 @@ import clsx from "clsx"
 import { Metadata } from "next"
 import { PageContainer } from "@/components/PageContainer"
 import { NavBar } from "@/app/NavBar"
-import Link from "next/link"
-import { classed } from "@tw-classed/react"
+import { RikLink } from "@/components/RikLink"
+import { divider } from "@/styles"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -27,33 +27,33 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </PageContainer>
 
           {/* Child page */}
-          <main className="mt-12">{children}</main>
+          <main className="mt-12 leading-7">{children}</main>
 
           {/* Footer */}
-          <footer className="mt-32 pb-16 ">
-            <PageContainer className="border-t border-zinc-100 pt-10 text-xs  leading-5 text-zinc-100 dark:border-zinc-700/40  dark:text-zinc-600">
+          <footer className="mt-16 px-8 pb-16">
+            <PageContainer className={clsx(divider, "border-t  pt-10 text-xs  leading-5 text-zinc-100  dark:text-zinc-600")}>
               &copy; {new Date().getFullYear()} Rik Brown. All rights reserved.
               <br />
               Built using{" "}
-              <FooterLink href="https://react.dev/" target="_blank">
+              <RikLink href="https://react.dev/" target="_blank">
                 React
-              </FooterLink>
+              </RikLink>
               ,{" "}
-              <FooterLink href="https://nextjs.org/" target="_blank">
+              <RikLink href="https://nextjs.org/" target="_blank">
                 Next.js
-              </FooterLink>{" "}
+              </RikLink>{" "}
               and{" "}
-              <FooterLink href="https://tailwindcss.com/" target="_blank">
+              <RikLink href="https://tailwindcss.com/" target="_blank">
                 Tailwind CSS
-              </FooterLink>
+              </RikLink>
               . Hosted on{" "}
-              <FooterLink href="https://vercel.com/dashboard" target="_blank">
+              <RikLink href="https://vercel.com/dashboard" target="_blank">
                 Vercel
-              </FooterLink>
+              </RikLink>
               . Source on{" "}
-              <FooterLink href="https://github.com/rikbrown/rik.codes" target="_blank">
+              <RikLink href="https://github.com/rikbrown/rik.codes" target="_blank">
                 Github
-              </FooterLink>
+              </RikLink>
               .
             </PageContainer>
           </footer>
@@ -62,8 +62,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   )
 }
-
-const FooterLink = classed(Link, "font-bold hover:text-zinc-600 dark:hover:text-zinc-400")
 
 export const metadata: Metadata = {
   title: "Rik Brown - Lead Software Engineer",
