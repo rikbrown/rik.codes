@@ -5,6 +5,8 @@ import clsx from "clsx"
 import { Metadata } from "next"
 import { PageContainer } from "@/components/PageContainer"
 import { NavBar } from "@/app/NavBar"
+import Link from "next/link"
+import { classed } from "@tw-classed/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -32,7 +34,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <PageContainer className="border-t border-zinc-100 pt-10 text-xs  leading-5 text-zinc-100 dark:border-zinc-700/40  dark:text-zinc-600">
               &copy; {new Date().getFullYear()} Rik Brown. All rights reserved.
               <br />
-              Built using <b>React</b>, <b>Next.js</b> and <b>Tailwind CSS</b>. Hosted on <b>Vercel</b>. Source on <b>Github</b>.
+              Built using{" "}
+              <FooterLink href="https://react.dev/" target="_blank">
+                React
+              </FooterLink>
+              ,{" "}
+              <FooterLink href="https://nextjs.org/" target="_blank">
+                Next.js
+              </FooterLink>{" "}
+              and{" "}
+              <FooterLink href="https://tailwindcss.com/" target="_blank">
+                Tailwind CSS
+              </FooterLink>
+              . Hosted on{" "}
+              <FooterLink href="https://vercel.com/dashboard" target="_blank">
+                Vercel
+              </FooterLink>
+              . Source on{" "}
+              <FooterLink href="https://github.com/rikbrown/rik.codes" target="_blank">
+                Github
+              </FooterLink>
+              .
             </PageContainer>
           </footer>
         </div>
@@ -40,6 +62,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   )
 }
+
+const FooterLink = classed(Link, "font-bold hover:text-zinc-600 dark:hover:text-zinc-400")
 
 export const metadata: Metadata = {
   title: "Rik Brown - Lead Software Engineer",
