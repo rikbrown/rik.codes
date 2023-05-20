@@ -3,6 +3,8 @@ import { Inter } from "next/font/google"
 import { ReactNode } from "react"
 import clsx from "clsx"
 import { Metadata } from "next"
+import { PageContainer } from "@/components/PageContainer"
+import { NavBar } from "@/app/NavBar"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,7 +23,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html className="h-full antialiased" lang="en">
       <body className={clsx("flex h-full flex-col bg-zinc-50  text-zinc-600 dark:bg-black dark:text-zinc-400 ", inter.className)}>
         <div className="fixed inset-0 flex justify-center px-8">
-          <div className="flex w-full max-w-7xl bg-white p-8 ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">{children}</div>
+          <div className="flex w-full max-w-7xl flex-col bg-white p-8 ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+        </div>
+        <div className="relative">
+          <PageContainer>
+            <NavBar />
+          </PageContainer>
+          <main className="mt-12">{children}</main>
+          <footer className="mt-32 pb-16 ">
+            <PageContainer className="border-t border-zinc-100 pt-10  text-xs text-zinc-100 dark:border-zinc-700/40  dark:text-zinc-600">
+              &copy; {new Date().getFullYear()} Rik Brown. All rights reserved.
+            </PageContainer>
+          </footer>
         </div>
       </body>
     </html>
