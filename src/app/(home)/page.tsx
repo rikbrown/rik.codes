@@ -24,7 +24,7 @@ export default function Home() {
             telemetry SDKs.
           </div>
           <div className="mt-6 flex items-center gap-x-6">
-            <Button href="/hire-me">Hire me!</Button>
+            <Button href="/hire">Hire me!</Button>
             <SocialLink title="LinkedIn" href="https://www.linkedin.com/in/rikbrown" icon={faLinkedin} />
             <SocialLink title="Github" href="https://github.com/rikbrown" icon={faGithub} />
             <SocialLink title="Instagram (mainly cat photos)" href="https://www.instagram.com/rikontherun/" icon={faInstagram} />

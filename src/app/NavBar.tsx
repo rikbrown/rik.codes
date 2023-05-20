@@ -35,4 +35,4 @@ export function NavBar() {
   )
 }
 
-const LINKS: LinkProps[] = [{ title: "About" }, { title: "Projects" }, { title: "Hire" }, { title: "Resume" }, { title: "Blog" }]
+const LINKS: LinkProps[] = [{ title: "About" }, { title: "Projects" }, { title: "Hire" }, { title: "Resume" }]

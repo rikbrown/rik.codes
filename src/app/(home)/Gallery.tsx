@@ -18,7 +18,7 @@ function GalleryItem({ alt, src, odd }: { alt: string; src: StaticImageData; odd
   // This could just use Tailwind's transitions, but use Framer Motion in case I want to animate these appearing more dramatically.
   return (
     <MotionDiv className="flex flex-col gap-y-1" initial={{ transform: odd ? "rotate(3deg)" : "rotate(-3deg)" }} whileHover={{ transform: "rotate(0deg)" }}>
-      <Image priority {...{ alt, src }} className="h-60 w-84 max-w-none rounded-2xl object-cover drop-shadow-md xl:h-80 xl:w-112" />
+      <Image priority placeholder="blur" {...{ alt, src }} className="h-60 w-84 max-w-none rounded-2xl object-cover drop-shadow-md xl:h-80 xl:w-112" />
       <div className="hidden text-center text-sm tracking-tight text-zinc-800 drop-shadow-sm dark:text-zinc-100 xl:block">{alt}</div>
     </MotionDiv>
   )
