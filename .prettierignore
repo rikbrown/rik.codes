@@ -3,3 +3,4 @@
 /.pnp.loader.mjs
 /yarn.lock
 /.next
+/pnpm-lock.yaml
