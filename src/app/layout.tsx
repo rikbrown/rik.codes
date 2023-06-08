@@ -31,7 +31,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
           {/* Footer */}
           <footer className="mt-16 px-8 pb-16">
-            <PageContainer className={clsx(divider, "border-t  pt-10 text-xs  leading-5 text-zinc-100  dark:text-zinc-600")}>
+            <PageContainer
+              className={clsx(divider, "border-t border-t-zinc-100 pt-10  text-xs leading-5  text-zinc-500 dark:border-t-zinc-300/20 dark:text-zinc-600")}
+            >
               &copy; {new Date().getFullYear()} Rik Brown. All rights reserved.
               <br />
               Built using{" "}
