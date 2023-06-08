@@ -10,7 +10,7 @@ import { SOCIALS } from "@/data/socials"
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons"
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 import clsx from "clsx"
-import { divider } from "@/styles"
+import { divider } from "@/app/styles"
 
 export default function About() {
   return (
@@ -64,7 +64,7 @@ export default function About() {
           </p>
         </div>
         <div className="space-y-6 text-sm lg:pl-20">
-          <div className={clsx("border-b", divider)}>
+          <div className={clsx("border-b pb-6", divider)}>
             <FontAwesomeIcon icon={faLocationDot} className="mr-4 inline h-6 w-6" />
             <span className="">Brooklyn, NY</span>
           </div>
