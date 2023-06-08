@@ -7,6 +7,7 @@ import { PageContainer } from "@/components/PageContainer"
 import { NavBar } from "@/app/NavBar"
 import { RikLink } from "@/components/RikLink"
 import { divider } from "@/styles"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -60,6 +61,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </PageContainer>
           </footer>
         </div>
+
+        <Analytics />
       </body>
     </html>
   )
